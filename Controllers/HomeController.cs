@@ -13,9 +13,10 @@ namespace OnlineVotingSystem.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public String Index(string? firstname=null, string? lastname=null)
         {
-            return View();
+            HelloController obj = new HelloController();
+            return obj.Index(firstname, lastname);
         }
 
         public IActionResult Privacy()
